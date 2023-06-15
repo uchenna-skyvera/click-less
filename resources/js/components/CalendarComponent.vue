@@ -23,6 +23,7 @@ export default {
     return {
       calendarOptions: {
         plugins: [resourceTimelinePlugin, interactionPlugin],
+        timeZone: 'UTC',
         schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
         views: {
           resourceTimeline10days: {
@@ -81,24 +82,6 @@ export default {
           },
         ]
       },
-      users: [
-        {
-          id: 1,
-          name: 'User 1',
-          events: [
-            { id: 1, title: 'Event 1' },
-            { id: 2, title: 'Event 3' },
-          ],
-        },
-        {
-          id: 2,
-          name: 'User 2',
-          events: [
-            { id: 3, title: 'Event 2' },
-          ],
-        },
-      ],
-      userEventPositions: {},
     }
   },
   methods: {

@@ -21,6 +21,9 @@
         "@fullcalendar/interaction": "^6.1.8",
         "@fullcalendar/resource": "^6.1.8",
         "@fullcalendar/resource-timeline": "^6.1.8",
-        "@fullcalendar/vue3": "^6.1.8"
+        "@fullcalendar/vue3": "^6.1.8",
+        "@websanova/vue-auth": "^4.2.1",
+        "bootstrap-vue": "^2.23.1",
+        "vue-router": "^4.2.2"
     }
 }

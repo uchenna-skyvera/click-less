@@ -6,6 +6,10 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import * as VueRouter from 'vue-router';
+import * as VueAuth from '@websanova/vue-auth';
+import router from './router';
+import auth from './auth';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,10 +19,18 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
-import CalendarComponent from './components/CalendarComponent.vue';
-app.component('example-component', ExampleComponent);
-app.component('calendar-component', CalendarComponent);
+// Set Vue router
+app.router = router;
+app.use(router);
+
+
+//axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api`;
+app.use(VueAuth, auth);
+
+import App from './views/App.vue';
+import navBar from './components/Navbar.vue'
+app.component('app', App);
+app.component('app-navbar', navBar);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
